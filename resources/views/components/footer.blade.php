@@ -4,10 +4,10 @@
         <h2>
             Care <span>Belize</span>
         </h2>
-        <p>We take the adventures and<br/>Bring them to you</p>
+        <p>We make your vacation<br/><strong>Enjoyable</strong> again!</p>
     </div>
     <div class="second">
-        <form class="left" onSubmit={submitSubscribe}>
+        <form class="left">
             <p>Get deal notifications</p>
             <div>
                 <input name="email" type="email" placeholder="myemail@gmail.com" required />
@@ -21,10 +21,10 @@
         </form>
         <div class="right">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/sustainability">Sustainability</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ route('services') }}">Services</a></li>
+                <li><a href="{{ route('about') }}">About</a></li>
+                <li><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -38,6 +38,9 @@
                 <i class="bi bi-linkedin"></i>
             </a>
         </div>
-        <p class="developer">Powered by Corbin Pacheco</p>
+        <p class="developer">
+            Powered by 
+            <a href="https://ctechintl.com" target="_blank" rel="noopener noreferrer" style="color: rgb(var(--accent-color));">Ctech International &trade;</a>
+        </p>
     </div>
 </footer>

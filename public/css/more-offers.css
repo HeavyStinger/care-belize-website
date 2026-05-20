@@ -1,0 +1,143 @@
+:root {
+  --mo-bg: #0e1116;
+  --mo-surface: rgba(255, 255, 255, 0.03);
+  --mo-surface-hover: rgba(255, 255, 255, 0.06);
+  --mo-border: rgba(255, 255, 255, 0.08);
+  --mo-border-strong: rgba(255, 255, 255, 0.14);
+  --mo-text: #e7e9ee;
+  --mo-text-muted: #8a93a3;
+  --mo-radius: 14px;
+  --mo-radius-sm: 999px;
+  --mo-font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------- Main container ---------- */
+.more-offers {
+  width: 100%;
+  margin-top: var(--spacing-page-y);
+  padding: 18px;
+  display: grid;
+  gap: 14px;
+  background: var(--mo-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  /* Intentionally quiet — should NOT compete with the primary CTA */
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+}
+
+.more-offers__head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 0 4px;
+}
+
+.more-offers__eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mo-text-muted);
+}
+
+.more-offers__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--mo-text);
+  opacity: 0.9;
+}
+
+/* ---------- Chips ---------- */
+.more-offers__chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--mo-text);
+  background: var(--mo-surface);
+  border: 1px solid var(--mo-border-strong);
+  border-radius: var(--mo-radius-sm);
+  cursor: pointer;
+  transition: background .18s ease, transform .18s ease, border-color .18s ease;
+}
+.chip:hover {
+  background: var(--mo-surface-hover);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-1px);
+}
+.chip:focus-visible {
+  outline: 2px solid #6ea8ff;
+  outline-offset: 2px;
+}
+
+.chip__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.04);
+}
+.chip__dot--violet { background: #a78bfa; }
+.chip__dot--teal   { background: #5eead4; }
+.chip__dot--amber  { background: #fbbf24; }
+.chip__dot--rose   { background: #fb7185; }
+
+.chip--ghost {
+  color: var(--mo-text-muted);
+  border-style: dashed;
+}
+
+/* ---------- Bottom CTA row ---------- */
+.more-offers__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--mo-border);
+  margin-top: 2px;
+}
+
+.more-offers__cta-text {
+  margin: 0;
+  font-size: 13px;
+  color: var(--mo-text-muted);
+  line-height: 1.5;
+}
+
+/* Quiet text-link CTA — deliberately NOT a filled button,
+   so it doesn't compete with the page's primary CTA. */
+.more-offers__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mo-text);
+  text-decoration: none;
+  padding: 6px 2px;
+  border-bottom: 1px solid transparent;
+  transition: color .18s ease, border-color .18s ease, gap .18s ease;
+}
+.more-offers__link:hover {
+  color: #fff;
+  border-bottom-color: rgba(255,255,255,0.4);
+  gap: 9px;
+}
+.more-offers__link svg { transition: transform .18s ease; }
+.more-offers__link:hover svg { transform: translateX(2px); }
+
+@media (max-width: 520px) {
+  .more-offers__cta { flex-direction: column; align-items: flex-start; }
+}

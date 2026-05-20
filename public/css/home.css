@@ -60,6 +60,43 @@
     color: inherit;
 }
 
+.partners-wrapper {
+    max-width: 1500px;
+    width: 100%;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    overflow: hidden;
+}
+
+.partners-track {
+    display: flex;
+    gap: 35px;
+    animation: scroll 20s linear infinite;
+}
+
+.partners-track.track2 {
+    margin-left: 35px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 /* Re assurance strip */
 .re-assurance-strip {
     width: 100%;
@@ -280,15 +317,6 @@
     border-radius: var(--border-radius);
 }
 
-.areas-container h2 {
-    font-size: clamp(1.5rem, 3vw, 2.3rem);
-    font-weight: 700;
-
-    margin-bottom: 28px;
-
-    color: #f5f5f5;
-}
-
 .areas-list {
     display: flex;
     justify-content: center;
@@ -339,11 +367,6 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
-
-    body {
-        padding: 20px 14px;
-    }
-
     .areas-container {
         padding: 28px 18px;
     }

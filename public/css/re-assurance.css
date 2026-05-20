@@ -72,7 +72,11 @@
   .desc{color:var(--muted);font-size:14.5px;line-height:1.6;margin:0;max-width:42ch}
 
   .meta{
-    margin-top:18px;display:flex;align-items:center;gap:10px;
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+    flex-wrap: wrap;
+    gap:10px;
     color:#cdd6e3;font-size:12.5px;
   }
   .re-assurance-pill{

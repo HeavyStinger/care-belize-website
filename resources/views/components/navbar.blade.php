@@ -8,16 +8,15 @@
 
     <div class="wrapper">
         <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/sustainability">Sustainability</a></li>
-            <li><a href="/safety">Safety</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <a href="/contact.html" class="cta-button primary">Get Care Now</a>
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('services') }}">Services</a></li>
+            <li><a href="{{ route('about') }}">About</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
+            <a href="{{ route('contact') }}" class="cta-button primary">Get Care Now</a>
         </ul>
     </div>
 
-    <a href="/contact.html" class="cta-button primary">Get Care Now</a>
+    <a href="{{ route('contact') }}" class="cta-button primary">Get Care Now</a>
     
     <div class="hamburger-wrapper" onclick="toggleMenu()">
         <div class="hamburger">

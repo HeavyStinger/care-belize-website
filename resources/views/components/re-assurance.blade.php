@@ -1,4 +1,5 @@
 <section class="re-assurance">
+
     <section class="grid" id="grid">
 
       <article class="card">
@@ -64,7 +65,7 @@
                 <span class="flag f-fr"></span>
                 <span class="flag f-de"></span>
               </div>
-              <span class="re-assurance-pill">+20 languages</span>
+              <span class="re-assurance-pill">+5 languages</span>
             </div>
           </div>
         </div>
@@ -92,5 +93,5 @@
 
     </section>
 
-    <p class="footer-note">Trusted by travelers in 60+ countries — and counting.</p>
+    <p class="footer-note">Trusted by travelers in 20+ countries and counting.</p>
 </section>

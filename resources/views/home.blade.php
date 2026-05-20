@@ -5,7 +5,9 @@
 @push('styles')
 	<link rel="stylesheet" href="{{ asset('css/home.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/scroll-pills.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/more-offers.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/re-assurance.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/secondary-cta.css') }}">
 @endpush
 
 @push('scripts')
@@ -30,18 +32,33 @@
 				Vacation should be relaxing, not stressful. With Care Belize, expert medical care is just a click away, so you can enjoy your trip worry-free.
 			</p>
 			<div class="buttons">
-				<a href="/destinations" class="cta-button primary">Get Care Now</a>
-				<a href="/contact" class="cta-button secondary">Learn More</a>
+				<a href="{{ route('contact') }}" class="cta-button primary">Get Care Now</a>
+				<a href="{{ route('about') }}" class="cta-button secondary">Learn More</a>
 			</div>
 		</div>
-		<!-- <div class="partners-wrapper">
+		<div class="partners-wrapper">
 			<div class="partners-track track1">
-				
+				<img src="{{ asset('images/partners/alaia.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/best-western-plus.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/chaa-creek.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/dekenz-transfers.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/muyono.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/ramada-by-wyndham.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/renova-med-spa.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/sleeping-giant.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
 			</div>
+
 			<div class="partners-track track2">
-				
+				<img src="{{ asset('images/partners/alaia.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/best-western-plus.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/chaa-creek.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/dekenz-transfers.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/muyono.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/ramada-by-wyndham.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/renova-med-spa.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">
+				<img src="{{ asset('images/partners/sleeping-giant.png') }}" style="height: 35px" alt="Alaia Mariott Hotel">	
 			</div>
-		</div> -->
+		</div>
 	</section>
 	
 	<section class="re-assurance-strip">
@@ -155,6 +172,9 @@
 		<!-- Scrolling pills -->
 		@include('components.scroll-pills')
 
+		<!-- More offers -->
+		@include('components.more-offers')
+
 		<!-- Re assurance -->
 		@include('components.re-assurance')
 
@@ -163,8 +183,8 @@
 
 			<div class="areas-container">
 
-				<h2>
-					We cover all major tourist areas
+				<h2 class="section-title">
+					We cover all major tourist areas in Belize
 				</h2>
 
 				<div class="areas-list">
@@ -214,6 +234,9 @@
 			</div>
 
 		</section>
+
+		<!-- Secondary CTA -->
+		@include('components.secondary-cta')
 	</main>
 
 	@include('components.footer')
