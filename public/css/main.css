@@ -80,7 +80,8 @@ html, body {
   color-scheme: light dark;
   color: var(--text-color);
   background-color: var(--primary-color);
-  border-color: #2b2b2b;
+  --border-color: #2b2b2b;
+  --border-color-strong: #363636;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
